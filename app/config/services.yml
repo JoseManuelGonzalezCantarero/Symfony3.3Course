@@ -23,6 +23,8 @@ services:
         tags: ['controller.service_arguments']
     # alias to allow this type to be autowired
     Knp\Bundle\MarkdownBundle\MarkdownParserInterface: '@markdown.parser'
+    Doctrine\ORM\EntityManager: '@doctrine.orm.default_entity_manager'
+
     AppBundle\Service\MarkdownTransformer:
         arguments: ['', '@doctrine_cache.providers.my_markdown_cache']
 
